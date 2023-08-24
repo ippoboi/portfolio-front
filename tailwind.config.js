@@ -13,6 +13,7 @@ module.exports = {
       "medium-big-title": "11px",
       "medium-title": "8px",
       "small-title": "7px",
+      "smaller-title": "5px",
       text: "2px",
       "small-text": "1.5px",
     },

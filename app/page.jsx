@@ -1,4 +1,9 @@
+import FaqComponent from "@components/faq-component";
+import Features from "@components/features";
 import Image from "next/image";
+import faqData from "@data/faq.json";
+import Input from "@components/input";
+import Form from "@components/form";
 
 const Home = () => {
   return (
@@ -19,9 +24,12 @@ const Home = () => {
               my top priority, I CREATE websites THAT are thought to solve them
               first.
             </p>
-            <button className="outline_btn_black mt-20 mx-auto lg:mx-0">
+            <a
+              className="outline_btn_black w-fit mt-20 mx-auto lg:mx-0"
+              href="#contact"
+            >
               WORK WITH ME
-            </button>
+            </a>
           </div>
           <div className="lg:relative lg:max-w-3xl md:max-w-lg max-w-xs -z-10 ">
             <Image
@@ -120,7 +128,9 @@ const Home = () => {
       <section className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 ">
         <div className="text-center">
           <h2 className="medium_big_title">BENEFITS</h2>
-          <p className="small_spaced_text">What I DO IT BETTER THAN OTHERS</p>
+          <p className="small_title text-gray-800">
+            What I DO IT BETTER THAN OTHERS
+          </p>
         </div>
         <div className="relative flex lg:flex-row flex-col gap-20 justify-center items-end">
           <div className="absolute md:-left-10 -top-10 -left-2 border-t-[1px] border-l-[1px] border-primary-black w-10 h-10"></div>
@@ -130,6 +140,7 @@ const Home = () => {
               src="/icons/benefits/Solve-Problems.png"
               width={100}
               height={100}
+              alt="decorative icon to describe the problems I solve on the website"
             />
             <h3 className="spaced_text text-highlight-purple">
               SOLVING PROBLEMS
@@ -146,6 +157,7 @@ const Home = () => {
               src="/icons/benefits/Planning.png"
               width={120}
               height={120}
+              alt="decorative icon to describe the strategies I plan on the website"
             />
             <h3 className="spaced_text text-highlight-purple">
               CREATING STRATEGIES
@@ -158,7 +170,12 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2 max-w-xs">
-            <Image src="/icons/benefits/Speed.png" width={90} height={90} />
+            <Image
+              src="/icons/benefits/Speed.png"
+              width={90}
+              height={90}
+              alt="decorative icon to describe the speed"
+            />
             <h3 className="spaced_text text-highlight-purple">SPEED IS KEY</h3>
             <div className="bg-primary-black h-[1px] w-20"></div>
             <p className="text-center md:w-full w-4/5">
@@ -232,9 +249,9 @@ const Home = () => {
           <p className="tracking-small-text text-[16px]">
             LET’S START DISCUSSING YOUR PROJECT.
           </p>
-          <button className="outline_btn_black mx-auto lg:mx-0">
+          <a className="outline_btn_black mx-auto lg:mx-0" href="#contact">
             WORK WITH ME
-          </button>
+          </a>
         </div>
         <div className="mx-auto flex flex-col items-center gap-5">
           <p className="small_title text-light-gray -mr-[3px]">TESTIMONIALS</p>
@@ -249,6 +266,119 @@ const Home = () => {
             <path d="M1 21L28.5 33L56 21" stroke="#B8B8B8" />
           </svg>
         </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="bg-primary-black text-white flex flex-col gap-20 pt-20 pb-20 px-5 lg:px-0">
+        <div className="text-center">
+          <h2 className="medium_big_title">TESTIMONIALS</h2>
+          <p className="small_title text-gray-300">My clients talk about me</p>
+        </div>
+        <div className="mx-auto 2xl:max-w-7xl lg:max-w-6xl flex gap-10 justify-center items-center">
+          <div className="border border-white w-[600px] h-[600px]"></div>
+          <div className="border border-white w-[600px] h-[600px]"></div>
+        </div>
+        <div className="flex flex-col justify-center items-center gap-3">
+          <p className="tracking-small-text text-[16px]">
+            ONE CLICK TO NEW CLIENTS AND BETTER CONVERSION RATES
+          </p>
+          <a className="outline_btn_white mx-auto lg:mx-0" href="#contact">
+            WORK WITH ME
+          </a>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32">
+        <div className="text-center">
+          <h2 className="medium_big_title">FEATURES</h2>
+          <p className="small_title text-gray-800">HOW I WILL CREATE VALUE</p>
+        </div>
+        <div className="flex flex-col gap-20">
+          <div className="grid grid-cols-3 gap-40">
+            <Features
+              iconSrc={"/icons/features/design.png"}
+              title={"DESIGN"}
+              alt={"decorative icon to describe my design skills"}
+            />
+            <Features
+              iconSrc={"/icons/features/dev.png"}
+              title={"DEVELOPMENT"}
+              alt={"decorative icon to describe my development skills"}
+            />
+            <Features
+              iconSrc={"/icons/features/seo.png"}
+              title={"BASIC SEO"}
+              alt={"decorative icon to describe my SEO skills"}
+            />
+          </div>
+          <div className="flex justify-center items-center gap-40">
+            <Features
+              iconSrc={"/icons/features/rocked-speed.png"}
+              title={"SPEED"}
+              alt={
+                "decorative icon to describe that the website I build are fast"
+              }
+            />
+            <Features
+              iconSrc={"/icons/features/perf.png"}
+              title={"PERFORMANCE"}
+              alt={
+                "decorative icon to describe that the website I build are performant"
+              }
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-primary-black text-white flex flex-col gap-20 pt-20 pb-20 px-5 lg:px-0">
+        <div className="text-center">
+          <h2 className="medium_big_title">FAQ</h2>
+          <p className="small_title text-gray-300">I ANSWER YOUR QUESTIONS</p>
+        </div>
+        <div className="mx-auto ">
+          {faqData.map((item, index) => (
+            <FaqComponent
+              question={item.question}
+              answer={item.answer}
+              key={index}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col justify-center items-center gap-3">
+          <a className="outline_btn_white mx-auto lg:mx-0" href="/FAQ">
+            MORE ANSWERS HERE
+          </a>
+        </div>
+        <div className="mx-auto flex flex-col items-center gap-5">
+          <p className="small_title text-light-gray -mr-[3px]">WORK WITH ME</p>
+          <svg
+            width="57"
+            height="34"
+            viewBox="0 0 57 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1L28.5 13L56 1" stroke="#B8B8B8" />
+            <path d="M1 21L28.5 33L56 21" stroke="#B8B8B8" />
+          </svg>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 justify-center items-center"
+      >
+        <div className="text-center">
+          <h2 className="medium_big_title">DO YOU WANT TO WORK WITH ME ?</h2>
+          <p className="small_title text-gray-800">
+            LET’S DISCUSS ABOUT YOUR PROJECT !
+          </p>
+        </div>
+
+        <Form />
       </section>
     </div>
   );
