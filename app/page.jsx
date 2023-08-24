@@ -29,7 +29,7 @@ const Home = () => {
               alt="A Business Owner and a Worker are looking at a computer screen and the business owner is pointing to the screen."
               width={600}
               height={400}
-              className=" lg:right-6"
+              className=" lg:right-6 border border-primary-black"
             />
             <div className="w-[600px] h-[400px] right-6 absolute bg-gradient-radial from-transparent from-70% to-white"></div>
           </div>
@@ -42,7 +42,7 @@ const Home = () => {
           {/* Video */}
           <div className="border border-white py-5">
             <iframe
-              className="lg:w-[500px] w-full md:h-96 h-48 xl:h-full "
+              className="lg:w-[600px] w-full md:h-96 h-48 xl:h-full "
               src={"https://www.youtube.com/embed/9No-FiEInLA"}
               allowFullScreen
             ></iframe>
@@ -171,7 +171,85 @@ const Home = () => {
       </section>
 
       {/* About me Section */}
-      <section className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 "></section>
+      <section className="text-primary-black flex flex-col justify-center items-center mx-auto gap-20 pt-20 pb-32 ">
+        <div className="relative">
+          <div className="absolute md:-left-10 -top-5 -left-2 border-t-[1px] border-l-[1px] border-primary-black w-10 h-10"></div>
+          <div className="absolute -bottom-5 md:-right-10 -right-2 border-r-[1px] border-b-[1px] border-primary-black w-10 h-10"></div>
+          <h2 className="medium_big_title">THEN, WHAT ABOUT ME ?</h2>
+        </div>
+        <div className="flex gap-20">
+          <div className="flex flex-col justify-center items-center gap-5">
+            <div className="relative border border-primary-black pr-3 pb-3 w-[310px] h-[340px]">
+              <div className="absolute -top-3 -left-3 border border-primary-black w-[310px] h-[340px]"></div>
+              <Image />
+            </div>
+            <p className="small_title italic max-w-xs text-center">
+              “IT STARTED AS A HOBBY, AND BECAME MY LIFE DRIVING PASSION.”
+            </p>
+            <div className="flex flex-col justify-center items-center gap-5">
+              <div className="bg-primary-black h-[1px] w-20"></div>
+              <div className="bg-primary-black h-[1px] w-10"></div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <h4 className="medium_title">
+              HELLO, MY NAME IS{" "}
+              <span className="bg-gradient-to-t from-highlight-purple/60 from-40% to-transparent to-40% font-semibold">
+                DIMITAR
+              </span>
+              .
+            </h4>
+            <p className="max-w-2xl tracking-small-text text-[16px]">
+              I ASPIRE TO CREATE BEAUTIFUL WEBSITES THAT HAS A{" "}
+              <strong>REAL VALUE</strong> TO MY CLIENTS AND THEIR BUSINESS.{" "}
+              <br />
+              <br />I STARTED MY JOURNEY 2 YEARS AGO BY THE BASICS OF WEB
+              DEVELOPMENT. THEN LEARNED MY WAY THROUGH TRY AND ERROR LIKE EVERY
+              DEVELOPER, TO CREATE <strong>BETTER WEBSITES</strong> DAY BY DAY.{" "}
+              <br />
+              <br />
+              BACK THEN, I WAS ONLY THINKING OF IMPROVING MY WEBSITES DESIGN,
+              WITHOUT EVEN THINKING THAT THE BUSINESS OWNER I HAD AS A CLIENT,
+              WAS PAYING ME TO COME UP WITH A TOOL THAT ENABLES HIM TO{" "}
+              <strong>SALE MORE</strong>
+              AND <strong>GROW HIS BUSINESS</strong>.
+              <br />
+              <br /> NOW, I LISTEN AND UNDERSTAND BETTER WHAT MY CLIENTS WANT :
+              A TOOL TO <strong>PROMOTE</strong> THEIR BUSINESS ONLINE, GET MORE{" "}
+              <strong>CONVERSION RATES</strong>, AND STILL HAVE A GREAT DESIGN.{" "}
+              <br />
+              <br />
+              FROM THE FIRST CALL TO THE END PRODUCT, I GUIDE THROUGH THE ENTIRE
+              PROCESS AND GIVE YOU THE KEYS TO{" "}
+              <strong>EXPAND YOUR PRESENCE ONLINE</strong> AND{" "}
+              <strong>REACH NEW CLIENTS</strong>.
+            </p>
+            <div className="bg-primary-black h-[1px] w-20"></div>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-center gap-3">
+          <p className="tracking-small-text text-[16px]">
+            LET’S START DISCUSSING YOUR PROJECT.
+          </p>
+          <button className="outline_btn_black mx-auto lg:mx-0">
+            WORK WITH ME
+          </button>
+        </div>
+        <div className="mx-auto flex flex-col items-center gap-5">
+          <p className="small_title text-light-gray -mr-[3px]">TESTIMONIALS</p>
+          <svg
+            width="57"
+            height="34"
+            viewBox="0 0 57 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1L28.5 13L56 1" stroke="#B8B8B8" />
+            <path d="M1 21L28.5 33L56 21" stroke="#B8B8B8" />
+          </svg>
+        </div>
+      </section>
     </div>
   );
 };
