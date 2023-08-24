@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="min-h-screen flex justify-center items-center lg:items-start flex-col gap-20 mx-auto mt-10">
+      <section className="min-h-screen flex justify-center items-center lg:items-start flex-col gap-20 mx-auto mt-10 lg:mt-0">
         <div className="relative flex lg:flex-row flex-col-reverse max-w-6xl 2xl:max-w-7xl items-center">
           <div className="max-w-xs md:max-w-lg lg:max-w-6xl 2xl:max-w-7xlflex flex-col items-center justify-center lg:items-start">
             <h1 className="big_title lg:text-[40px] text-center lg:text-left leading-5 mb-12">
@@ -42,7 +42,7 @@ const Home = () => {
           {/* Video */}
           <div className="border border-white py-5">
             <iframe
-              className="lg:w-[600px] w-full md:h-96 lg:h-80 h-full"
+              className="lg:w-[500px] w-full md:h-96 h-48 xl:h-full "
               src={"https://www.youtube.com/embed/9No-FiEInLA"}
               allowFullScreen
             ></iframe>
@@ -117,7 +117,61 @@ const Home = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="text-primary-black flex flex-col gap-20 py-32"></section>
+      <section className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 ">
+        <div className="text-center">
+          <h2 className="medium_big_title">BENEFITS</h2>
+          <p className="small_spaced_text">What I DO IT BETTER THAN OTHERS</p>
+        </div>
+        <div className="relative flex lg:flex-row flex-col gap-20 justify-center items-end">
+          <div className="absolute md:-left-10 -top-10 -left-2 border-t-[1px] border-l-[1px] border-primary-black w-10 h-10"></div>
+          <div className="absolute -bottom-10 md:-right-10 -right-2 border-r-[1px] border-b-[1px] border-primary-black w-10 h-10"></div>
+          <div className="flex flex-col justify-center items-center gap-2 max-w-xs">
+            <Image
+              src="/icons/benefits/Solve-Problems.png"
+              width={100}
+              height={100}
+            />
+            <h3 className="spaced_text text-highlight-purple">
+              SOLVING PROBLEMS
+            </h3>
+            <div className="bg-primary-black h-[1px] w-20"></div>
+            <p className="text-center md:w-full w-4/5">
+              I want to make a website that solves your business problems, so
+              you think that you made a good choice choosing this tool to grow
+              your business
+            </p>
+          </div>
+          <div className="flex flex-col justify-center items-center gap-2 max-w-xs">
+            <Image
+              src="/icons/benefits/Planning.png"
+              width={120}
+              height={120}
+            />
+            <h3 className="spaced_text text-highlight-purple">
+              CREATING STRATEGIES
+            </h3>
+            <div className="bg-primary-black h-[1px] w-20"></div>
+            <p className="text-center md:w-full w-4/5">
+              I plan the website structure and functionalities to have a higher
+              engagement from the visitors, and higher conversion rates than
+              website with only design in mind
+            </p>
+          </div>
+          <div className="flex flex-col justify-center items-center gap-2 max-w-xs">
+            <Image src="/icons/benefits/Speed.png" width={90} height={90} />
+            <h3 className="spaced_text text-highlight-purple">SPEED IS KEY</h3>
+            <div className="bg-primary-black h-[1px] w-20"></div>
+            <p className="text-center md:w-full w-4/5">
+              I know that time is money, and things happen fast in the world. I
+              am trained to create excellent websites in the fastest way
+              possible
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* About me Section */}
+      <section className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 "></section>
     </div>
   );
 };
