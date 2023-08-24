@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="min-h-screen flex justify-center items-center lg:items-start flex-col gap-20 mx-auto">
+      <section className="min-h-screen flex justify-center items-center lg:items-start flex-col gap-20 mx-auto mt-10">
         <div className="relative flex lg:flex-row flex-col-reverse max-w-6xl 2xl:max-w-7xl items-center">
           <div className="max-w-xs md:max-w-lg lg:max-w-6xl 2xl:max-w-7xlflex flex-col items-center justify-center lg:items-start">
             <h1 className="big_title lg:text-[40px] text-center lg:text-left leading-5 mb-12">
@@ -13,21 +13,23 @@ const Home = () => {
                 WITH A HIGH CONVERSION RATE WEBSITE
               </span>
             </h1>
-            <div className="line w-20" />
+            <div className="line w-20 mx-auto" />
             <p className="small_spaced_text text-center lg:text-left lg:max-w-xl md:max-w-lg mt-5">
               Listening and understanding your problems as a Business Owner is
               my top priority, I CREATE websites THAT are thought to solve them
               first.
             </p>
-            <button className="outline_btn_black mt-20">WORK WITH ME</button>
+            <button className="outline_btn_black mt-20 mx-auto lg:mx-0">
+              WORK WITH ME
+            </button>
           </div>
-          <div className="relative lg:w-[600px] w-[200px] lg:h-[400px] -z-10">
+          <div className="lg:relative lg:max-w-3xl md:max-w-lg max-w-xs -z-10 ">
             <Image
               src="/images/Hero-Section-Photo.webp"
               alt="A Business Owner and a Worker are looking at a computer screen and the business owner is pointing to the screen."
               width={600}
               height={400}
-              className="absolute right-6"
+              className=" lg:right-6"
             />
             <div className="w-[600px] h-[400px] right-6 absolute bg-gradient-radial from-transparent from-70% to-white"></div>
           </div>
@@ -40,7 +42,7 @@ const Home = () => {
           {/* Video */}
           <div className="border border-white py-5">
             <iframe
-              className="lg:w-[600px] w-full md:h-96 h-full"
+              className="lg:w-[600px] w-full md:h-96 lg:h-80 h-full"
               src={"https://www.youtube.com/embed/9No-FiEInLA"}
               allowFullScreen
             ></iframe>
