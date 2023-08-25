@@ -2,8 +2,8 @@ import FaqComponent from "@components/faq-component";
 import Features from "@components/features";
 import Image from "next/image";
 import faqData from "@data/faq.json";
-import Input from "@components/input";
 import Form from "@components/form";
+import Benefits from "@components/benefits";
 
 const Home = () => {
   return (
@@ -11,14 +11,14 @@ const Home = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex justify-center items-center lg:items-start flex-col gap-20 mx-auto mt-10 lg:mt-0">
         <div className="relative flex lg:flex-row flex-col-reverse max-w-6xl 2xl:max-w-7xl items-center">
-          <div className="max-w-xs md:max-w-lg lg:max-w-6xl 2xl:max-w-7xlflex flex-col items-center justify-center lg:items-start">
+          <div className="max-w-xs md:max-w-lg lg:max-w-6xl 2xl:max-w-7xl flex flex-col items-center justify-center lg:items-start">
             <h1 className="big_title lg:text-[40px] text-center lg:text-left leading-5 mb-12">
               <span className="leading-10">GROW YOUR BUSINESS</span> <br />
               <span className="small_spaced_text lg:text-[24px] lg:font-light">
                 WITH A HIGH CONVERSION RATE WEBSITE
               </span>
             </h1>
-            <div className="line w-20 mx-auto" />
+            <div className="bg-primary-black h-[1px] w-20" />
             <p className="small_spaced_text text-center lg:text-left lg:max-w-xl md:max-w-lg mt-5">
               Listening and understanding your problems as a Business Owner is
               my top priority, I CREATE websites THAT are thought to solve them
@@ -46,17 +46,17 @@ const Home = () => {
 
       {/* Pob Sol Section */}
       <section className="bg-primary-black text-white flex flex-col gap-20 lg:pt-32 pt-20 pb-20 px-5 lg:px-0">
-        <div className="flex lg:flex-row flex-col-reverse gap-10 2xl:max-w-7xl lg:max-w-6xl mx-auto ">
+        <div className="flex lg:flex-row flex-col-reverse gap-10 2xl:max-w-7xl lg:max-w-6xl mx-auto">
           {/* Video */}
-          <div className="border border-white py-5">
+          <div className="border border-white py-5 h-fit">
             <iframe
-              className="lg:w-[600px] w-full md:h-96 h-48 xl:h-full "
+              className="xl:w-[600px] lg:w-[450px] w-full md:h-96 lg:h-64 h-48 xl:h-96 "
               src={"https://www.youtube.com/embed/9No-FiEInLA"}
               allowFullScreen
             ></iframe>
           </div>
           {/* Text */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 lg:w-96 xl:w-full">
             <p className="spaced_text text-justify lg:text-left">
               Your business is running good, AND you think a website can give
               you{" "}
@@ -125,76 +125,47 @@ const Home = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 ">
+      <section className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 px-5 xl:px-0">
         <div className="text-center">
           <h2 className="medium_big_title">BENEFITS</h2>
           <p className="small_title text-gray-800">
             What I DO IT BETTER THAN OTHERS
           </p>
         </div>
-        <div className="relative flex lg:flex-row flex-col gap-20 justify-center items-end">
-          <div className="absolute md:-left-10 -top-10 -left-2 border-t-[1px] border-l-[1px] border-primary-black w-10 h-10"></div>
-          <div className="absolute -bottom-10 md:-right-10 -right-2 border-r-[1px] border-b-[1px] border-primary-black w-10 h-10"></div>
-          <div className="flex flex-col justify-center items-center gap-2 max-w-xs">
-            <Image
-              src="/icons/benefits/Solve-Problems.png"
-              width={100}
-              height={100}
-              alt="decorative icon to describe the problems I solve on the website"
-            />
-            <h3 className="spaced_text text-highlight-purple">
-              SOLVING PROBLEMS
-            </h3>
-            <div className="bg-primary-black h-[1px] w-20"></div>
-            <p className="text-center md:w-full w-4/5">
-              I want to make a website that solves your business problems, so
-              you think that you made a good choice choosing this tool to grow
-              your business
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-2 max-w-xs">
-            <Image
-              src="/icons/benefits/Planning.png"
-              width={120}
-              height={120}
-              alt="decorative icon to describe the strategies I plan on the website"
-            />
-            <h3 className="spaced_text text-highlight-purple">
-              CREATING STRATEGIES
-            </h3>
-            <div className="bg-primary-black h-[1px] w-20"></div>
-            <p className="text-center md:w-full w-4/5">
-              I plan the website structure and functionalities to have a higher
-              engagement from the visitors, and higher conversion rates than
-              website with only design in mind
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-2 max-w-xs">
-            <Image
-              src="/icons/benefits/Speed.png"
-              width={90}
-              height={90}
-              alt="decorative icon to describe the speed"
-            />
-            <h3 className="spaced_text text-highlight-purple">SPEED IS KEY</h3>
-            <div className="bg-primary-black h-[1px] w-20"></div>
-            <p className="text-center md:w-full w-4/5">
-              I know that time is money, and things happen fast in the world. I
-              am trained to create excellent websites in the fastest way
-              possible
-            </p>
-          </div>
+        <div className="relative flex lg:flex-row flex-col gap-20 justify-center items-center">
+          <div className="absolute md:-left-4 xl:-left-10 -top-10 left-0 border-t-[1px] border-l-[1px] border-primary-black w-10 h-10"></div>
+          <div className="absolute -bottom-10 md:-right-4 xl:-right-10 right-0 border-r-[1px] border-b-[1px] border-primary-black w-10 h-10"></div>
+          <Benefits
+            title={"SOLVING PROBLEMS"}
+            description={
+              "I want to make a website that solves your business problems, so you think that you made a good choice choosing this tool to grow your business"
+            }
+          />
+          <Benefits
+            title={"CREATING STRATEGIES"}
+            description={
+              "I plan the website structure and functionalities to have a higher engagement from the visitors, and higher conversion rates than website with only design in mind"
+            }
+          />
+          <Benefits
+            title={"SPEED IS KEY"}
+            description={
+              "I know that time is money, and things happen fast in the world. I am trained to create excellent websites in the fastest way possible"
+            }
+          />
         </div>
       </section>
 
       {/* About me Section */}
-      <section className="text-primary-black flex flex-col justify-center items-center mx-auto gap-20 pt-20 pb-32 ">
+      <section className="text-primary-black flex flex-col justify-center items-center mx-auto gap-20 pt-20 pb-32 px-5 xl:px-0">
         <div className="relative">
           <div className="absolute md:-left-10 -top-5 -left-2 border-t-[1px] border-l-[1px] border-primary-black w-10 h-10"></div>
           <div className="absolute -bottom-5 md:-right-10 -right-2 border-r-[1px] border-b-[1px] border-primary-black w-10 h-10"></div>
-          <h2 className="medium_big_title">THEN, WHAT ABOUT ME ?</h2>
+          <h2 className="lg:text-[32px] text-[20px] tracking-small-title lg:tracking-medium-big-title uppercase text-center">
+            THEN, WHAT ABOUT ME ?
+          </h2>
         </div>
-        <div className="flex gap-20">
+        <div className="flex gap-20 flex-col lg:flex-row">
           <div className="flex flex-col justify-center items-center gap-5">
             <div className="relative border border-primary-black pr-3 pb-3 w-[310px] h-[340px]">
               <div className="absolute -top-3 -left-3 border border-primary-black w-[310px] h-[340px]"></div>
@@ -209,15 +180,15 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5">
-            <h4 className="medium_title">
+          <div className="flex flex-col gap-5 items-center lg:items-start">
+            <h4 className="lg:text-[24px] tracking-medium-title text-[20px] uppercase text-center lg:text-left">
               HELLO, MY NAME IS{" "}
               <span className="bg-gradient-to-t from-highlight-purple/60 from-40% to-transparent to-40% font-semibold">
                 DIMITAR
               </span>
               .
             </h4>
-            <p className="max-w-2xl tracking-small-text text-[16px]">
+            <p className="max-w-2xl tracking-small-text text-[16px] text-justify">
               I ASPIRE TO CREATE BEAUTIFUL WEBSITES THAT HAS A{" "}
               <strong>REAL VALUE</strong> TO MY CLIENTS AND THEIR BUSINESS.{" "}
               <br />
@@ -246,7 +217,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center gap-3">
-          <p className="tracking-small-text text-[16px]">
+          <p className="tracking-small-text text-[16px] text-center">
             LET’S START DISCUSSING YOUR PROJECT.
           </p>
           <a className="outline_btn_black mx-auto lg:mx-0" href="#contact">
@@ -269,17 +240,17 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-primary-black text-white flex flex-col gap-20 pt-20 pb-20 px-5 lg:px-0">
+      <section className="bg-primary-black text-white flex flex-col gap-20 pt-20 pb-20 px-5 xl:px-0">
         <div className="text-center">
           <h2 className="medium_big_title">TESTIMONIALS</h2>
           <p className="small_title text-gray-300">My clients talk about me</p>
         </div>
-        <div className="mx-auto 2xl:max-w-7xl lg:max-w-6xl flex gap-10 justify-center items-center">
-          <div className="border border-white w-[600px] h-[600px]"></div>
-          <div className="border border-white w-[600px] h-[600px]"></div>
+        <div className="mx-auto 2xl:max-w-7xl lg:max-w-6xl md:max-w-xl max-w-xs w-full flex gap-5 justify-center items-center flex-col lg:flex-row">
+          <div className="border border-white xl:w-[600px] w-full lg:h-[600px] h-96"></div>
+          <div className="border border-white xl:w-[600px] w-full lg:h-[600px] h-96"></div>
         </div>
         <div className="flex flex-col justify-center items-center gap-3">
-          <p className="tracking-small-text text-[16px]">
+          <p className="tracking-small-text text-[16px] text-center">
             ONE CLICK TO NEW CLIENTS AND BETTER CONVERSION RATES
           </p>
           <a className="outline_btn_white mx-auto lg:mx-0" href="#contact">
@@ -294,8 +265,8 @@ const Home = () => {
           <h2 className="medium_big_title">FEATURES</h2>
           <p className="small_title text-gray-800">HOW I WILL CREATE VALUE</p>
         </div>
-        <div className="flex flex-col gap-20">
-          <div className="grid grid-cols-3 gap-40">
+        <div className="flex flex-col gap-20 items-center">
+          <div className="grid lg:grid-cols-3 grid-cols-1 grid-rows-3 lg:grid-rows-1 xl:gap-40 gap-20">
             <Features
               iconSrc={"/icons/features/design.png"}
               title={"DESIGN"}
@@ -312,7 +283,7 @@ const Home = () => {
               alt={"decorative icon to describe my SEO skills"}
             />
           </div>
-          <div className="flex justify-center items-center gap-40">
+          <div className="flex lg:flex-row flex-col justify-center items-center xl:gap-40 gap-20">
             <Features
               iconSrc={"/icons/features/rocked-speed.png"}
               title={"SPEED"}
@@ -369,11 +340,13 @@ const Home = () => {
       {/* Contact Section */}
       <section
         id="contact"
-        className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 justify-center items-center"
+        className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 justify-center items-center px-5 lg:px-0"
       >
         <div className="text-center">
-          <h2 className="medium_big_title">DO YOU WANT TO WORK WITH ME ?</h2>
-          <p className="small_title text-gray-800">
+          <h2 className="lg:text-[32px] text-[20px] tracking-medium-big-title uppercase">
+            DO YOU WANT TO WORK WITH ME ?
+          </h2>
+          <p className="lg:text-[20px] text-[16px] tracking-small-title uppercase text-gray-800 mt-2">
             LET’S DISCUSS ABOUT YOUR PROJECT !
           </p>
         </div>

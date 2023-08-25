@@ -15,20 +15,17 @@ const Form = () => {
     console.log("Form submitted");
   };
   return (
-    <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-      <div className="flex lg:flex-row flex-col gap-5">
-        <Input inputTitle={"First Name"} isSmall={true} placeholder={""} />
-        <Input inputTitle={"Last Name"} isSmall={true} placeholder={""} />
+    <form
+      className="flex flex-col gap-5 w-full md:w-fit"
+      onSubmit={handleSubmit}
+    >
+      <div className="flex md:flex-row flex-col gap-5">
+        <Input inputTitle={"First Name"} placeholder={""} />
+        <Input inputTitle={"Last Name"} placeholder={""} />
       </div>
-      <Input
-        inputTitle={"Email"}
-        isSmall={false}
-        placeholder={""}
-        isEmail={true}
-      />
+      <Input inputTitle={"Email"} placeholder={""} isEmail={true} />
       <Input
         inputTitle={"Quick Description"}
-        isSmall={false}
         isTextArea={true}
         placeholder={
           "Hello, I am the owner of a small restaurant at X and I want to expand my presence online. I already have some ideas about..."

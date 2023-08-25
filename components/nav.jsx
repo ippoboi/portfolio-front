@@ -7,7 +7,7 @@ const Nav = () => {
   const [status, setStatus] = useState(false);
   const pathname = usePathname();
   return (
-    <div className="fixed top-0 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl max-w-xs w-full z-10 ">
+    <div className="fixed top-0 2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl max-w-xs w-full z-10">
       <div className="flex justify-between backdrop-blur-md w-full border border-primary-black bg-white/50 mt-5 lg:py-[5px] lg:pr-[5px] lg:pl-[30px] md:py-[17px] md:px-[30px] py-[15px] px-[12px] items-center">
         <div className="nav_text">
           <a href="/">Dimitar Dimitrov</a>

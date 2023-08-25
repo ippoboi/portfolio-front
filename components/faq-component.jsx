@@ -12,7 +12,7 @@ const FaqComponent = ({ question, answer }) => {
             className="flex items-center justify-between border-b-white border-b-[1px] p-5 cursor-pointer"
             onClick={() => setStatus(!status)}
           >
-            <p className="uppercase tracking-smaller-title font-light">
+            <p className="uppercase tracking-smaller-title text-[14px] lg:text-[16px] font-light">
               {question}
             </p>
             <svg
@@ -35,7 +35,7 @@ const FaqComponent = ({ question, answer }) => {
             className="flex items-center justify-between border-b-white border-b-[1px] p-5 cursor-pointer"
             onClick={() => setStatus(!status)}
           >
-            <p className="uppercase tracking-smaller-title font-light">
+            <p className="uppercase tracking-smaller-title text-[14px] lg:text-[16px] font-light">
               {question}
             </p>
             <svg
