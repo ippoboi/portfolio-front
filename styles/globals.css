@@ -90,7 +90,7 @@
 }
 
 .outline_btn_purple {
-  @apply border border-highlight-purple bg-transparent py-[6px] px-[19px] text-highlight-purple transition-all hover:bg-highlight-purple hover:text-secondary-white text-center text-sm font-inter flex items-center justify-center w-fit tracking-button-spacing uppercase;
+  @apply border border-highlight-purple py-[5px] px-[16px] text-highlight-purple bg-transparent transition-all hover:bg-highlight-purple hover:text-secondary-white text-center text-sm font-inter flex items-center justify-center w-fit tracking-button-spacing uppercase;
 }
 
 .head_text {

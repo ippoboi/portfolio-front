@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Input from "./input";
 
-const Form = () => {
+const Form = ({ isBlack, btnMessage, messagePlaceholder }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,20 +20,29 @@ const Form = () => {
       onSubmit={handleSubmit}
     >
       <div className="flex md:flex-row flex-col gap-5">
-        <Input inputTitle={"First Name"} placeholder={""} />
-        <Input inputTitle={"Last Name"} placeholder={""} />
+        <Input inputTitle={"First Name"} placeholder={""} isBlack={isBlack} />
+        <Input inputTitle={"Last Name"} placeholder={""} isBlack={isBlack} />
       </div>
-      <Input inputTitle={"Email"} placeholder={""} isEmail={true} />
       <Input
-        inputTitle={"Quick Description"}
+        inputTitle={"Email"}
+        placeholder={""}
+        isEmail={true}
+        isBlack={isBlack}
+      />
+      <Input
+        inputTitle={"Message"}
         isTextArea={true}
-        placeholder={
-          "Hello, I am the owner of a small restaurant at X and I want to expand my presence online. I already have some ideas about..."
-        }
+        placeholder={messagePlaceholder}
+        isBlack={isBlack}
       />
       <div className="flex flex-col justify-center items-center mt-10">
-        <button className="outline_btn_black mx-auto lg:mx-0" value={"submit"}>
-          SEND IT !
+        <button
+          className={`${
+            isBlack ? "outline_btn_black" : "outline_btn_white"
+          } mx-auto lg:mx-0`}
+          value={"submit"}
+        >
+          {btnMessage}
         </button>
       </div>
     </form>

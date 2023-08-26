@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [status, setStatus] = useState(false);
@@ -13,7 +14,7 @@ const Nav = () => {
           <a href="/">Dimitar Dimitrov</a>
         </div>
 
-        <button
+        <motion.button
           className="duration-300 ease-in-out lg:hidden"
           type="button"
           onClick={() => setStatus(!status)}
@@ -42,7 +43,7 @@ const Nav = () => {
               <rect x="8" y="18" width="16" height="1" fill="#171717" />
             </svg>
           )}
-        </button>
+        </motion.button>
 
         <div className="nav_text hidden lg:flex items-center gap-10">
           <a
@@ -67,13 +68,13 @@ const Nav = () => {
           >
             <span className="">FAQ</span>
           </a>
-          <a href="/" className="black_btn">
+          <a href="/#contact" className="black_btn">
             Contact
           </a>
         </div>
       </div>
       {status && (
-        <div className="nav_text backdrop-blur-md lg:hidden flex flex-col items-end border px-[20px] border-primary-black border-t-0">
+        <div className="nav_text backdrop-blur-md lg:hidden flex flex-col items-end border px-[20px] bg-white/50 border-primary-black border-t-0">
           <a
             href="/"
             className={`py-[17px] w-full text-right ${
@@ -103,7 +104,7 @@ const Nav = () => {
             <span className="-mr-[4px]">FAQ</span>
           </a>
           <div className="line w-full" />
-          <a href="/" className="black_btn my-[18px]">
+          <a href="/#contact" className="black_btn my-[18px]">
             Contact
           </a>
         </div>

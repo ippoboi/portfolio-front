@@ -4,6 +4,7 @@ import Image from "next/image";
 import faqData from "@data/faq.json";
 import Form from "@components/form";
 import Benefits from "@components/benefits";
+import Testimonials from "@components/testimonials";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex justify-center items-center lg:items-start flex-col gap-20 mx-auto mt-10 lg:mt-0">
         <div className="relative flex lg:flex-row flex-col-reverse max-w-6xl 2xl:max-w-7xl items-center">
-          <div className="max-w-xs md:max-w-lg lg:max-w-6xl 2xl:max-w-7xl flex flex-col items-center justify-center lg:items-start">
+          <div className="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl md:max-w-2xl max-w-xs flex flex-col items-center justify-center lg:items-start">
             <h1 className="big_title lg:text-[40px] text-center lg:text-left leading-5 mb-12">
               <span className="leading-10">GROW YOUR BUSINESS</span> <br />
               <span className="small_spaced_text lg:text-[24px] lg:font-light">
@@ -246,8 +247,8 @@ const Home = () => {
           <p className="small_title text-gray-300">My clients talk about me</p>
         </div>
         <div className="mx-auto 2xl:max-w-7xl lg:max-w-6xl md:max-w-xl max-w-xs w-full flex gap-5 justify-center items-center flex-col lg:flex-row">
-          <div className="border border-white xl:w-[600px] w-full lg:h-[600px] h-96"></div>
-          <div className="border border-white xl:w-[600px] w-full lg:h-[600px] h-96"></div>
+          <Testimonials />
+          <Testimonials />
         </div>
         <div className="flex flex-col justify-center items-center gap-3">
           <p className="tracking-small-text text-[16px] text-center">
@@ -343,7 +344,7 @@ const Home = () => {
         className="text-primary-black flex flex-col mx-auto gap-20 pt-20 pb-32 justify-center items-center px-5 lg:px-0"
       >
         <div className="text-center">
-          <h2 className="lg:text-[32px] text-[20px] tracking-medium-big-title uppercase">
+          <h2 className="lg:text-[32px] text-[20px] tracking-small-title uppercase">
             DO YOU WANT TO WORK WITH ME ?
           </h2>
           <p className="lg:text-[20px] text-[16px] tracking-small-title uppercase text-gray-800 mt-2">
@@ -351,7 +352,13 @@ const Home = () => {
           </p>
         </div>
 
-        <Form />
+        <Form
+          isBlack={true}
+          btnMessage={"send it"}
+          messagePlaceholder={
+            "Hello, I am the owner of a small restaurant at X and I want to expand my presence online. I already have some ideas about..."
+          }
+        />
       </section>
     </div>
   );

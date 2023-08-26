@@ -26,7 +26,7 @@ const FaqComponent = ({ question, answer }) => {
             </svg>
           </div>
           <div>
-            <p className="text-white text-[14px]  p-5">{answer}</p>
+            <p className="text-white text-[14px] p-5">{answer}</p>
           </div>
         </div>
       ) : (
