@@ -18,7 +18,7 @@ const Input = ({ inputTitle, isTextArea, placeholder, isEmail, isBlack }) => {
             isBlack
               ? "border-primary-black focus:ring-primary-black"
               : "border-white focus:ring-white bg-transparent"
-          }  py-2 px-4 focus:outline-none focus:ring-2  focus:border-transparent w-full`}
+          }  py-2 px-4 focus:outline-none focus:ring-2 focus:border-transparent w-full`}
         />
       ) : (
         <textarea

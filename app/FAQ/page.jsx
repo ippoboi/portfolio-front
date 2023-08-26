@@ -8,7 +8,7 @@ const FAQ = () => {
     <div className="w-full bg-primary-black flex flex-col justify-center items-center border-b-[1px] border-white">
       {/* FAQ */}
       <section className="2xl:max-w-7xl xl:max-w-6xl lg:max-w-4xl max-w-2xl w-full text-white flex flex-col justify-center items-center gap-20 pt-20 pb-20 px-5 lg:px-0 mt-20">
-        <h1 className="text-[20px] md:text-[32px] tracking-small-title uppercase text-center">
+        <h1 className="text-[18px] md:text-[32px] tracking-small-title uppercase text-center">
           How can I help you ?
         </h1>
         <div className="w-full max-w-3xl border-b-[1px] border-white flex justify-center items-center">

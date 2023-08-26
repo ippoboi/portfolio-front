@@ -141,18 +141,21 @@ const Home = () => {
             description={
               "I want to make a website that solves your business problems, so you think that you made a good choice choosing this tool to grow your business"
             }
+            imageUrl={"/icons/benefits/Solve-Problems.png"}
           />
           <Benefits
             title={"CREATING STRATEGIES"}
             description={
               "I plan the website structure and functionalities to have a higher engagement from the visitors, and higher conversion rates than website with only design in mind"
             }
+            imageUrl={"/icons/benefits/Planning.png"}
           />
           <Benefits
             title={"SPEED IS KEY"}
             description={
               "I know that time is money, and things happen fast in the world. I am trained to create excellent websites in the fastest way possible"
             }
+            imageUrl={"/icons/benefits/Speed.png"}
           />
         </div>
       </section>
@@ -272,16 +275,25 @@ const Home = () => {
               iconSrc={"/icons/features/design.png"}
               title={"DESIGN"}
               alt={"decorative icon to describe my design skills"}
+              description={
+                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
+              }
             />
             <Features
               iconSrc={"/icons/features/dev.png"}
               title={"DEVELOPMENT"}
               alt={"decorative icon to describe my development skills"}
+              description={
+                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
+              }
             />
             <Features
               iconSrc={"/icons/features/seo.png"}
               title={"BASIC SEO"}
               alt={"decorative icon to describe my SEO skills"}
+              description={
+                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
+              }
             />
           </div>
           <div className="flex lg:flex-row flex-col justify-center items-center xl:gap-40 gap-20">
@@ -291,12 +303,18 @@ const Home = () => {
               alt={
                 "decorative icon to describe that the website I build are fast"
               }
+              description={
+                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
+              }
             />
             <Features
               iconSrc={"/icons/features/perf.png"}
               title={"PERFORMANCE"}
               alt={
                 "decorative icon to describe that the website I build are performant"
+              }
+              description={
+                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
               }
             />
           </div>
