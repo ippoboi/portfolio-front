@@ -1,11 +1,10 @@
-const Input = ({ inputTitle, isTextArea, placeholder, isEmail, isBlack }) => {
+function Input({ inputTitle, isTextArea, placeholder, isEmail, isBlack }) {
   return (
     <div className="flex flex-col">
       <label
         className={`uppercase tracking-small-text text-[14px] ${
           isBlack ? "text-primary-black" : "text-white"
         }`}
-        for=""
       >
         {inputTitle}
       </label>
@@ -33,6 +32,6 @@ const Input = ({ inputTitle, isTextArea, placeholder, isEmail, isBlack }) => {
       )}
     </div>
   );
-};
+}
 
 export default Input;

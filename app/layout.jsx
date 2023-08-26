@@ -7,7 +7,7 @@ export const metadata = {
   description: "Web Designer",
 };
 
-const RootLayout = ({ children }) => {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body>
@@ -23,6 +23,4 @@ const RootLayout = ({ children }) => {
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

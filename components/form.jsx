@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Input from "./input";
 
-const Form = ({ isBlack, btnMessage, messagePlaceholder }) => {
+function Form({ isBlack, btnMessage, messagePlaceholder }) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -47,6 +47,6 @@ const Form = ({ isBlack, btnMessage, messagePlaceholder }) => {
       </div>
     </form>
   );
-};
+}
 
 export default Form;

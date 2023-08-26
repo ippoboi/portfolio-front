@@ -3,7 +3,7 @@ import Form from "@components/form";
 import faqData from "@data/faq.json";
 import Image from "next/image";
 
-const FAQ = () => {
+export default function FAQ() {
   return (
     <div className="w-full bg-primary-black flex flex-col justify-center items-center border-b-[1px] border-white">
       {/* FAQ */}
@@ -52,6 +52,4 @@ const FAQ = () => {
       </section>
     </div>
   );
-};
-
-export default FAQ;
+}

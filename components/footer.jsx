@@ -1,6 +1,6 @@
 import { BiLogoInstagram, BiLogoLinkedin, BiLogoGithub } from "react-icons/bi";
 
-const Footer = () => {
+function Footer() {
   return (
     <div className="sticky bg-primary-black w-full">
       <div className="xl:max-w-6xl lg:max-w-4xl md:max-w-2xl max-w-xs mx-auto py-5 px-5 flex md:flex-row flex-col gap-16 md:gap-0 justify-between md:items-center items-start mt-10">
@@ -37,6 +37,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Footer;

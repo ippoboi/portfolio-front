@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const PostTile = ({ PostTitle, PostDescription, imageUrl, altTag }) => {
+function PostTile({ PostTitle, PostDescription, imageUrl, altTag }) {
   return (
     <div className="border-primary-black border max-w-md h-72 flex flex-col justify-end p-5 relative bg-gradient-to-t from-white to-transparent">
       <Image
@@ -20,6 +20,6 @@ const PostTile = ({ PostTitle, PostDescription, imageUrl, altTag }) => {
       </button>
     </div>
   );
-};
+}
 
 export default PostTile;

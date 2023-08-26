@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const FaqComponent = ({ question, answer }) => {
+export default function FaqComponent({ question, answer }) {
   const [status, setStatus] = useState(false);
   return (
     <div className="flex items-center justify-start">
@@ -52,6 +52,4 @@ const FaqComponent = ({ question, answer }) => {
       )}
     </div>
   );
-};
-
-export default FaqComponent;
+}

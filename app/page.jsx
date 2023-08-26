@@ -6,7 +6,7 @@ import Form from "@components/form";
 import Benefits from "@components/benefits";
 import Testimonials from "@components/testimonials";
 
-const Home = () => {
+export default function Home() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
@@ -171,9 +171,15 @@ const Home = () => {
         </div>
         <div className="flex gap-20 flex-col lg:flex-row">
           <div className="flex flex-col justify-center items-center gap-5">
-            <div className="relative border border-primary-black pr-3 pb-3 w-[310px] h-[340px]">
-              <div className="absolute -top-3 -left-3 border border-primary-black w-[310px] h-[340px]"></div>
-              <Image />
+            <div className="relative border border-primary-black pr-[10px] pb-[10px] w-[310px] h-[340px] ">
+              <div className="absolute -top-[10px] -left-[10px] border border-primary-black w-[310px] h-[340px]"></div>
+              <Image
+                src={"/images/ProfilePhoto.jpg"}
+                width={310}
+                height={340}
+                alt="A picture of me, Dimitar, the web designer"
+                className="object-cover w-[310px] h-[330px]"
+              />
             </div>
             <p className="small_title italic max-w-xs text-center">
               “IT STARTED AS A HOBBY, AND BECAME MY LIFE DRIVING PASSION.”
@@ -378,6 +384,4 @@ const Home = () => {
       </section>
     </div>
   );
-};
-
-export default Home;
+}

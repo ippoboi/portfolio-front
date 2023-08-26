@@ -1,7 +1,7 @@
 import HeroPostTile from "@components/hero-post-tile";
 import PostTile from "@components/post-tile";
 
-const Blog = () => {
+export default function Blog() {
   return (
     <div className="flex flex-col w-full gap-10 pb-10">
       {/* Hero Section */}
@@ -178,6 +178,4 @@ const Blog = () => {
       </section>
     </div>
   );
-};
-
-export default Blog;
+}

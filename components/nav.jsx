@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const Nav = () => {
+function Nav() {
   const [status, setStatus] = useState(false);
   const pathname = usePathname();
   return (
@@ -111,6 +111,6 @@ const Nav = () => {
       )}
     </div>
   );
-};
+}
 
 export default Nav;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const HeroPostTile = ({ PostTitle, PostDescription, imageUrl, altTag }) => {
+function HeroPostTile({ PostTitle, PostDescription, imageUrl, altTag }) {
   return (
     <div className="flex h-[600px] flex-col justify-end p-10 relative bg-gradient-to-t from-white to-transparent items-center">
       <Image
@@ -22,6 +22,6 @@ const HeroPostTile = ({ PostTitle, PostDescription, imageUrl, altTag }) => {
       </div>
     </div>
   );
-};
+}
 
 export default HeroPostTile;
