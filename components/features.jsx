@@ -18,7 +18,7 @@ const Features = ({ iconSrc, title, alt, description }) => {
         <h4 className="text-[24px] tracking-smaller-title uppercase">
           {title}
         </h4>
-        <p className="small_spaced_text text-center text-white hidden group-hover:block">
+        <p className="text-[14px] tracking-small-text uppercase text-center text-white hidden group-hover:block px-5">
           {description}
         </p>
       </div>

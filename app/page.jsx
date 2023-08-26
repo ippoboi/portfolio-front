@@ -284,7 +284,7 @@ const Home = () => {
               title={"DEVELOPMENT"}
               alt={"decorative icon to describe my development skills"}
               description={
-                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
+                "No-Code Solution or Coded Website, I choose the best option for your project, so you pay for the right service."
               }
             />
             <Features
@@ -292,7 +292,7 @@ const Home = () => {
               title={"BASIC SEO"}
               alt={"decorative icon to describe my SEO skills"}
               description={
-                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
+                "Ongoing search engine optimization to have better ranking"
               }
             />
           </div>
@@ -304,7 +304,7 @@ const Home = () => {
                 "decorative icon to describe that the website I build are fast"
               }
               description={
-                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
+                "A fast website have more chance to keep visitors from leaving."
               }
             />
             <Features
@@ -313,9 +313,7 @@ const Home = () => {
               alt={
                 "decorative icon to describe that the website I build are performant"
               }
-              description={
-                "Sales first, Design Second. Yet, a good-looking design is still mandatory to have."
-              }
+              description={"I think about optimizing your website performance."}
             />
           </div>
         </div>

@@ -8,7 +8,7 @@ const Benefits = ({ title, description, imageUrl }) => {
         width={100}
         height={100}
         alt="decorative icon to describe the problems I solve on the website"
-        className=" object-cover w-fit h-20"
+        className=" object-cover w-20 h-20"
       />
       <h3 className="spaced_text text-highlight-purple"> {title}</h3>
       <div className="bg-primary-black h-[1px] w-20"></div>
