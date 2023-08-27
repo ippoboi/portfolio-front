@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function Post({ post }) {
   return (
-    <div className="flex flex-col w-full text-primary-black mb-20">
+    <div className="flex flex-col w-full text-primary-black mb-20 mt-20">
       <section className="min-h-[500px] flex justify-end items-center flex-col lg:items-start gap-20 mx-auto mt-10 lg:mt-0 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl max-w-xs">
-        <div className="grid grid-cols-2">
-          <div className="flex flex-col gap-5">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-0">
+          <div className="flex flex-col gap-5 lg:text-left items-center text-center lg:items-start">
             <div className="flex gap-5">
               <div className="text-highlight-purple">SALES</div>
               <div>27 AUGUST 2023</div>
@@ -19,7 +19,7 @@ export default function Post({ post }) {
               READ TO THIS 5 MINUTE LONG ARTICLE ON HOW TO OUTREACH HIGH PAYING
               CLIENTS, SO YOU CAN LIVE OF YOUR FREELANCING NICHE.
             </p>
-            <div className="flex items-center gap-5">
+            <div className="flex flex-col lg:flex-row items-center gap-5">
               <Image
                 src={"/images/ProfilePhoto.jpg"}
                 alt=""
@@ -34,8 +34,8 @@ export default function Post({ post }) {
               </div>
             </div>
           </div>
-          <div className="relative flex justify-end">
-            <div className="w-96 h-96 absolute border border-primary-black -top-[10px] right-[10px]"></div>
+          <div className="relative md:w-fit mx-auto lg:mx-0 flex lg:ml-auto">
+            <div className="w-96 h-96 max-w-xs md:max-w-none absolute border border-primary-black -top-[10px] right-[10px] "></div>
             <Image
               src={"/images/Hero-Section-Photo.webp"}
               alt=""
@@ -61,7 +61,7 @@ export default function Post({ post }) {
       <section className="bg-primary-black w-full my-20">
         <div className="xl:max-w-5xl lg:max-w-4xl md:max-w-2xl max-w-xs w-full mx-auto py-10">
           <div className="text-white spaced_text">READ MORE</div>
-          <div className="flex gap-2 w-full mt-2">
+          <div className="flex lg:flex-row flex-col gap-2 w-full mt-2">
             <PostTile
               PostTitle={
                 "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
@@ -90,7 +90,7 @@ export default function Post({ post }) {
         className="text-primary-black flex flex-col mx-auto gap-10 pt-20 pb-32 justify-center items-center px-5 lg:px-0"
       >
         <div className="text-center">
-          <h2 className="lg:text-[24px] text-[16px] tracking-small-title uppercase">
+          <h2 className="lg:text-[24px] text-[20px] tracking-small-title uppercase">
             A BUSINESS IDEA ? A BUSINESS TO GROW ONLINE ?
           </h2>
           <p className="lg:text-[16px] text-[14px] tracking-small-title uppercase text-gray-800 mt-2">
