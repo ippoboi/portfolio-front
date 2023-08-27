@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function HeroPostTile({ PostTitle, PostDescription, imageUrl, altTag }) {
   return (
-    <div className="flex h-[600px] flex-col justify-end p-10 relative bg-gradient-to-t from-white to-transparent items-center">
+    <div className="flex h-[600px] group/card flex-col justify-end p-10 relative bg-gradient-to-t from-white to-transparent items-center">
       <Image
         src={imageUrl}
         alt={altTag}
@@ -18,7 +18,31 @@ function HeroPostTile({ PostTitle, PostDescription, imageUrl, altTag }) {
         <p className="text-[14px] small_spaced_text max-w-3xl">
           {PostDescription}
         </p>
-        <button className="outline_btn_purple mt-5">Read More</button>
+        <button className="border  group/button border-highlight-purple py-[5px] px-[16px] text-highlight-purple bg-transparent duration-500 ease-in-out hover:bg-highlight-purple hover:text-secondary-white text-center text-sm font-inter lg:flex items-center justify-center w-fit tracking-button-spacing uppercase mt-5 hidden">
+          Read More
+          <div className="hidden group-hover/card:block group-hover/button:hidden  pl-3">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M1 1H10M10 1V10M10 1L1 10" stroke="#C51EFF" />
+            </svg>
+          </div>
+          <div className="group-hover/button:block hidden duration-500 ease-in-out pl-3">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M1 1H10M10 1V10M10 1L1 10" stroke="white" />
+            </svg>
+          </div>
+        </button>
       </div>
     </div>
   );

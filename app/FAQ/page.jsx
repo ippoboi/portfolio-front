@@ -1,7 +1,7 @@
 import FaqComponent from "@components/faq-component";
 import Form from "@components/form";
 import faqData from "@data/faq.json";
-import Image from "next/image";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function FAQ() {
   return (
@@ -12,12 +12,7 @@ export default function FAQ() {
           How can I help you ?
         </h1>
         <div className="w-full max-w-3xl border-b-[1px] border-white flex justify-center items-center">
-          <Image
-            src="/icons/search.png"
-            width={100}
-            height={100}
-            className="w-5 h-5 ml-5"
-          />
+          <AiOutlineSearch size={20} className="pl-5 w-10" />
           <input
             className="w-full bg-primary-black p-5 small_spaced_text font-light placeholder:text-white/50 focus:outline-none"
             placeholder="Search..."
