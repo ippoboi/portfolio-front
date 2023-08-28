@@ -1,7 +1,15 @@
+import { client } from "@app/lib/sanity";
 import HeroPostTile from "@components/hero-post-tile";
 import PostTile from "@components/post-tile";
 
-export default function Blog() {
+async function getPosts() {
+  const query = '*[_type == "post"]';
+  const data = await client.fetch(query);
+  return data;
+}
+
+export default async function Blog() {
+  const data = await getPosts();
   return (
     <div className="flex flex-col w-full gap-10 pb-10">
       {/* Hero Section */}
@@ -21,132 +29,18 @@ export default function Blog() {
       <section className="flex lg:items-start flex-col gap-2 mx-auto mt-10 lg:mt-0 max-w-xs md:max-w-lg lg:max-w-6xl 2xl:max-w-7xl">
         <h2 className="medium_big_title ">Trending</h2>
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-2 ">
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
+          {data.map((post) => (
+            <PostTile key={post._id} data={post} />
+          ))}
         </div>
       </section>
       {/* Discover */}
       <section className="flex lg:items-start flex-col gap-2 mx-auto mt-10 lg:mt-0 max-w-xs md:max-w-lg lg:max-w-6xl 2xl:max-w-7xl">
         <h2 className="medium_big_title">Discover</h2>
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-2 ">
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
-          <PostTile
-            PostTitle={
-              "TIME TO GET YOUR FIRST CLIENTS AND START LIVING THE LIFE YOU WANT"
-            }
-            PostDescription={
-              "All you need to know to start right away and sell your services or products to clients"
-            }
-            imageUrl={"/images/Hero-Section-Photo.webp"}
-            altTag={"Hero Section Photo"}
-          />
+        <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-2 w-full">
+          {data.map((post) => (
+            <PostTile key={post._id} data={post} />
+          ))}
         </div>
         <div className="flex items-center justify-center gap-5 my-10 mx-auto">
           <svg

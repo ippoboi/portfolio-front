@@ -1,24 +1,22 @@
-// import { sanity } from "../../../lib/sanity";
-
+import { client } from "@app/lib/sanity";
 import PostTile from "@components/post-tile";
 import Image from "next/image";
 
-export default function Post({ post }) {
+export default async function Post({ slug }) {
+  console.log(slug);
+  const data = await getData(slug);
   return (
     <div className="flex flex-col w-full text-primary-black mb-20 mt-20">
       <section className="min-h-[500px] flex justify-end items-center flex-col lg:items-start gap-20 mx-auto mt-10 lg:mt-0 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl max-w-xs">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-0">
           <div className="flex flex-col gap-5 lg:text-left items-center text-center lg:items-start">
             <div className="flex gap-5">
-              <div className="text-highlight-purple">SALES</div>
-              <div>27 AUGUST 2023</div>
+              <div className="text-highlight-purple">{data.categories}</div>
+              <div>{data._createdAt}</div>
             </div>
-            <h1 className="big_title">HOW TO GET HIGH PAYING CLIENTS</h1>
+            <h1 className="big_title">{data.title}</h1>
             <div className="h-[1px] w-20 bg-primary-black"></div>
-            <p className="small_spaced_text">
-              READ TO THIS 5 MINUTE LONG ARTICLE ON HOW TO OUTREACH HIGH PAYING
-              CLIENTS, SO YOU CAN LIVE OF YOUR FREELANCING NICHE.
-            </p>
+            <p className="small_spaced_text">{data.excerpt}</p>
             <div className="flex flex-col lg:flex-row items-center gap-5">
               <Image
                 src={"/images/ProfilePhoto.jpg"}
@@ -48,14 +46,7 @@ export default function Post({ post }) {
       </section>
       <section className="flex flex-col mx-auto text-primary-black mt-20 xl:max-w-5xl lg:max-w-4xl md:max-w-2xl max-w-xs">
         <div>
-          <p>
-            READ TO THIS 5 MINUTE LONG ARTICLE ON HOW TO OUTREACH HIGH PAYING
-            CLIENTS, SO YOU CAN LIVE OF YOUR FREELANCING NICHE. READ TO THIS 5
-            MINUTE LONG ARTICLE ON HOW TO OUTREACH HIGH PAYING CLIENTS, SO YOU
-            CAN LIVE OF YOUR FREELANCING NICHE. READ TO THIS 5 MINUTE LONG
-            ARTICLE ON HOW TO OUTREACH HIGH PAYING CLIENTS, SO YOU CAN LIVE OF
-            YOUR FREELANCING NICHE.
-          </p>
+          <p>{data.body}</p>
         </div>
       </section>
       <section className="bg-primary-black w-full my-20">
@@ -105,30 +96,10 @@ export default function Post({ post }) {
   );
 }
 
-// export async function getStaticPaths() {
-//   const paths = await client.fetch(
-//     `*[_type == "post" && defined(slug.current)][].slug.current`
-//   );
+export async function getData(slug) {
+  const query = `*[_type == "post" && slug.current == "${slug}"]`;
 
-//   return {
-//     paths: paths.map((slug) => ({ params: { slug } })),
-//     fallback: true,
-//   };
-// }
+  const data = await client.fetch(query);
 
-// export async function getStaticProps(context) {
-//   // It's important to default the slug so that it doesn't return "undefined"
-//   const { slug = "" } = context.params;
-//   const post = await sanity.fetch(
-//     `
-//     *[_type == "post" && slug.current == $slug][0]
-//   `,
-//     { slug }
-//   );
-
-//   return {
-//     props: {
-//       post,
-//     },
-//   };
-// }
+  return data;
+}
